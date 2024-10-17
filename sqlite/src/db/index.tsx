@@ -5,15 +5,7 @@ export default function Query(){
     useEffect(()=>{
         fetch("/prisma")
         .then((res)=>res.json())
-        .then((data)=>{
-            data.elem.map((e:any)=>{
-                setData(
-                    e.title
-                )
-            })
-            console.log(data.elem)
-            // setData(data.elem)
-        });
+        .then((data)=>setData(data.elem.title));
     },[])
 
     return <>
