@@ -18,8 +18,8 @@ app.get('/prisma', async(req:any, res:any)=>{
         title: '456'
       }
     })
-    const query = await prisma.post.findFirst()
-    res.json({elem :query?.title})
+    const query = await prisma.post.findMany()
+    res.json({elem :query})
   }
   catch(error){
     console.log(error)
