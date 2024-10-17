@@ -17,6 +17,6 @@ export default function Query(){
     },[])
 
     return <>
-        <p>{!data[0].title ? "Loading..." : data[0].title}</p>
+        <p>{!data ? "Loading..." : data}</p>
     </>
 }
